@@ -1,0 +1,265 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #d37ba8;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.sidebar {
+    width: 260px;
+    background-color: #9a477c;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.sidebar h2 {
+    margin-top: 0;
+    font-size: 18px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.sidebar ul li a:hover {
+    background-color: #86436c;
+}
+
+.main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    margin-left: 260px;
+}
+
+.header {
+    background-color: #d37ba8;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 260px;
+    right: 0;
+    z-index: 100;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.create {
+    padding: 8px;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.create:hover {
+    background-color: #f0f0f0;
+}
+
+.board {
+    display: flex;
+    padding: 20px;
+    gap: 10px;
+    overflow-x: auto;
+    flex-grow: 1;
+    margin-top: 60px;
+    margin-left: 0;
+}
+
+.list {
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    width: 300px;
+    box-sizing: border-box;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.list h3 {
+    margin-top: 0;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.card {
+    background-color: #f4f5f7;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+    cursor: move;
+    border: 1px solid transparent;
+}
+
+.card span {
+    font-size: 16px;
+    color: #333;
+    flex-grow: 1;
+    text-align: left;
+}
+
+.card-buttons {
+    display: flex;
+    gap: 5px;
+    position: relative;
+    margin-left: auto;
+}
+
+.edit,
+.delete {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+}
+
+.edit:hover,
+.delete:hover {
+    color: #d37ba8;
+}
+
+.edit-input {
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #f4f5f7;
+    color: #333;
+}
+
+.add-card {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.add-card input {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+.add-card button {
+    padding: 8px;
+    background-color: #d37ba8;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.add-card button:hover {
+    background-color: #c76a97;
+}
+
+.delete-all {
+    margin-top: 10px;
+    padding: 8px;
+    background-color: #d37ba8;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.delete-all:hover {
+    background-color: #c76a97;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        position: relative;
+        height: auto;
+        padding: 10px;
+        overflow-y: auto;
+    }
+
+    .sidebar ul {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .sidebar ul li {
+        margin-bottom: 5px;
+    }
+
+    .main {
+        margin-left: 0;
+        margin-top: 50px;
+    }
+
+    .header {
+        position: relative;
+        left: 0;
+        right: 0;
+        margin-bottom: 20px;
+    }
+
+    .board {
+        flex-direction: column;
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .list {
+        width: 100%;
+    }
+
+    .board {
+        flex-direction: column;
+        gap: 20px;
+        padding: 10px;
+    }
+    .list {
+        width: 100%;
+    }
+    .card {
+        cursor: move;
+    }
+
+}

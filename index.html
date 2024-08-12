@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Trello Board</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="sidebar">
+        <h2>Trello Workspace</h2>
+        <ul>
+            <li><a href="#">Boards</a></li>
+            <li><a href="#">Members</a></li>
+            <li><a href="#">Workspace settings</a></li>
+            <li><a href="#">Table</a></li>
+            <li><a href="#">Calendar</a></li>
+        </ul>
+        <h2>Your boards</h2>
+        <ul>
+            <li><a href="#">My Trello board</a></li>
+        </ul>
+    </div>
+
+    <div class="main">
+        <div class="header">
+            <h1>My Trello board</h1>
+            <button class="create">Create</button>
+        </div>
+        <div class="board">
+            <div class="list" id="todo" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <h3>To do</h3>
+                <!-- Existing cards with unique IDs -->
+                <div class="card" id="card1" draggable="true" ondragstart="drag(event)">
+                    <span>Task 1</span>
+                    <div class="card-buttons">
+                        <button class="edit">✏️</button>
+                        <button class="delete">🗑️</button>
+                    </div>
+                </div>
+                <div class="add-card">
+                    <input type="text" placeholder="Enter card title...">
+                    <button>Add a card</button>
+                </div>
+                <button class="delete-all">Delete All</button>
+            </div>
+            <div class="list" id="doing" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <h3>Doing</h3>
+                <div class="card" id="card2" draggable="true" ondragstart="drag(event)">
+                    <span>Task 2</span>
+                    <div class="card-buttons">
+                        <button class="edit">✏️</button>
+                        <button class="delete">🗑️</button>
+                    </div>
+                </div>
+                <div class="add-card">
+                    <input type="text" placeholder="Enter card title...">
+                    <button>Add a card</button>
+                </div>
+                <button class="delete-all">Delete All</button>
+            </div>
+            <div class="list" id="done" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <h3>Done</h3>
+                <div class="card" id="card3" draggable="true" ondragstart="drag(event)">
+                    <span>Task 3</span>
+                    <div class="card-buttons">
+                        <button class="edit">✏️</button>
+                        <button class="delete">🗑️</button>
+                    </div>
+                </div>
+                <div class="add-card">
+                    <input type="text" placeholder="Enter card title...">
+                    <button>Add a card</button>
+                </div>
+                <button class="delete-all">Delete All</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
